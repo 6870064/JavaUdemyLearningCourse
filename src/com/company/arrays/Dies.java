@@ -10,8 +10,13 @@ public class Dies {
         for (int i = 0; i < 1000; i++) {
             ++freqeuency[1 + random.nextInt(6)];
         }
-        for (int i = 1; i < freqeuency.length; i++) {
-            System.out.println("Side " + i + " : " + freqeuency[i]);
+
+//        for (int i = 1; i < freqeuency.length; i++) {
+//            System.out.println("Side " + i + " : " + freqeuency[i]);
+//        }
+
+        for (int i : freqeuency) {
+            System.out.println("Side "+i);
         }
 
         multidimArrayLouncher();
