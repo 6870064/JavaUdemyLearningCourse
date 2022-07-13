@@ -15,7 +15,6 @@ public class NumbersOutput {
                 int a = scanner.nextInt();
                 System.out.println("Enter B parameter value");
                 int b = scanner.nextInt();
-
                 if (a < b) {
                     for (int i = a; i <= b; i++) {
                         System.out.println(i);
@@ -30,9 +29,10 @@ public class NumbersOutput {
                     System.out.println("Both parameters are equal: " + a);
                 }
                 continueLoop = false;
+
             } catch (InputMismatchException e) {
                 System.out.println("Exception : " + e);
-                scanner.nextInt();
+                scanner.nextLine();
                 System.out.println("Only integer parameters allowed");
             } finally {
                 System.out.println("Finally block is called");
