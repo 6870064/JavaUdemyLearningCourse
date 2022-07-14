@@ -11,7 +11,7 @@ public class StudentAspirantMain {
         Aspirant aspirant2 = new Aspirant("Ekaterina", "Sidorovich", 3);
         Student student4 = aspirant2; //Создать переменную типа Student, которая ссылается на объект типа Aspirant.
         Student[] students = {student, student1, student2, student3, student4, aspirant, aspirant1, aspirant2};
-        
+
         student.setAverageMark(student.countScholarship(5, 4, 5, 3, 4, 5, 5, 4));
         student1.setAverageMark(student.countScholarship(5, 5, 5, 5, 5, 5, 5, 5, 5, 5));
         student2.setAverageMark(student2.countScholarship(5,5,5,4,5,5,5,5));
