@@ -14,6 +14,5 @@ public class InternetShopMain {
 
         Basket basket = new Basket(purchasedProducts);
         User user = new User("Vasya Ivanov", "qwerty12", basket);
-;
     }
 }
