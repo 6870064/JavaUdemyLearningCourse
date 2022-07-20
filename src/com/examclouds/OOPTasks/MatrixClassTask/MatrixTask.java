@@ -3,17 +3,17 @@ package com.examclouds.OOPTasks.MatrixClassTask;
 
 import java.util.Random;
 
-public class Matrix {
+public class MatrixTask {
     int n, m;
     int[][] mainMatrix;
 
-    public Matrix(int n, int m) {
+    public MatrixTask(int n, int m) {
         this.n = n;
         this.m = m;
         this.mainMatrix = new int[this.n][this.m];
     }
 
-    public Matrix(int[][] paramMatrix) {
+    public MatrixTask(int[][] paramMatrix) {
         this.n = paramMatrix.length;
         this.m = paramMatrix[0].length;
     }
@@ -28,8 +28,8 @@ public class Matrix {
         return tmpMatrix;
     }
 
-    public static Matrix transposeMatrix(Matrix paramMatrix) {
-        Matrix tmpMatrix = new Matrix(paramMatrix.m, paramMatrix.n);
+    public static MatrixTask transposeMatrix(MatrixTask paramMatrix) {
+        MatrixTask tmpMatrix = new MatrixTask(paramMatrix.m, paramMatrix.n);
         for (int i = 0; i < paramMatrix.m; i++) {
             for (int j = 0; j < paramMatrix.n; j++) {
                 tmpMatrix.setElement(i, j, paramMatrix.getElement(j, i));
@@ -73,11 +73,11 @@ public class Matrix {
         }
     }
 
-    public static Matrix add(Matrix first, Matrix second) throws NotEqualLengthsOfMatrixException {
+    public static MatrixTask add(MatrixTask first, MatrixTask second) throws NotEqualLengthsOfMatrixException {
         if (first.getHorizontalLength() != second.getVerticalLength()) {
             throw new NotEqualLengthsOfMatrixException();
         } else {
-            Matrix tmpMatrix = new Matrix(first.getVerticalLength(), second.getHorizontalLength());
+            MatrixTask tmpMatrix = new MatrixTask(first.getVerticalLength(), second.getHorizontalLength());
             for (int i = 0; i < tmpMatrix.getHorizontalLength(); i++) {
                 for (int j = 0; j < tmpMatrix.getVerticalLength(); j++) {
                     tmpMatrix.setElement(i, j, first.getElement(i, j) + second.getElement(i, j));
@@ -87,12 +87,12 @@ public class Matrix {
         }
     }
 
-        public static Matrix substract(Matrix first, Matrix second) throws NotEqualLengthsOfMatrixException {
+        public static MatrixTask substract(MatrixTask first, MatrixTask second) throws NotEqualLengthsOfMatrixException {
         if(first.getVerticalLength() != second.getVerticalLength() ||
             first.getHorizontalLength() != second.getHorizontalLength()) {
             throw new NotEqualLengthsOfMatrixException();
         } else {
-            Matrix tmpMatrix = new Matrix(first.getVerticalLength(), second.getHorizontalLength());
+            MatrixTask tmpMatrix = new MatrixTask(first.getVerticalLength(), second.getHorizontalLength());
             for (int i = 0; i < tmpMatrix.getHorizontalLength(); i++) {
                 for (int j = 0; j < tmpMatrix.getVerticalLength(); j++) {
                     tmpMatrix.setElement(i, j, first.getElement (i, j) - second.getElement(i, j));
@@ -102,11 +102,11 @@ public class Matrix {
         }
         }
 
-        public static Matrix multiply (Matrix first, Matrix second) throws NotEqualLengthsOfMatrixException {
+        public static MatrixTask multiply (MatrixTask first, MatrixTask second) throws NotEqualLengthsOfMatrixException {
             if (first.getHorizontalLength() != second.getVerticalLength()) {
                 throw new NotEqualLengthsOfMatrixException();
             } else {
-                Matrix tmpMatrix;
+                MatrixTask tmpMatrix;
                 int n = first.getVerticalLength();
                 int m = second.getHorizontalLength();
                 int o = second.getVerticalLength();
@@ -118,7 +118,7 @@ public class Matrix {
                         }
                     }
                 }
-                tmpMatrix = new Matrix(tmpArr);
+                tmpMatrix = new MatrixTask(tmpArr);
                 return tmpMatrix;
             }
         }

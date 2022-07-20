@@ -13,13 +13,13 @@ public class MatrixTaskMain {
                 {33, 45, 17, 81},
                 {45, 63, 12, 16}};
 
-        Matrix x = new Matrix(A);
-        Matrix y = new Matrix(B);
+        MatrixTask x = new MatrixTask(A);
+        MatrixTask y = new MatrixTask(B);
 
         x.displayMatrix();
         y.displayMatrix();
 
-        Matrix mM = Matrix.multiply(x, y);
+        MatrixTask mM = MatrixTask.multiply(x, y);
         mM.displayMatrix();
 
 
