@@ -26,6 +26,12 @@ public class CollectionsRunner {
             System.out.printf("%-20s %s", deckOfCards.get(i), (i + 1) % 4 == 0 ? "\n" : "  ");
         }
 
+        Collections.sort(deckOfCards, new CardComparator());
+        System.out.println("\n\nCards after sorting");
+
+        for (int i = 0; i < deckOfCards.size(); i++) {
+            System.out.printf("%-20s %s", deckOfCards.get(i), (i + 1) % 4 == 0 ? "\n" : "  ");
+        }
 
     }
 }
