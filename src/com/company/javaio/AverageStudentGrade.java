@@ -31,6 +31,6 @@ public class AverageStudentGrade implements Comparable<AverageStudentGrade> {
 
     @Override
     public String toString() {
-        return "Student's name: " +name+ " Grade: " +averageGrade;
+        return "Student's name: " + name + " Grade: " + averageGrade;
     }
 }

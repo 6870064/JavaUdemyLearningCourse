@@ -30,7 +30,7 @@ public class TreeMapRunner {
         }
     }
 
-    private static NavigableMap<AverageStudentGrade, Set<SubjectGrade>> createGrades() {
+    static NavigableMap<AverageStudentGrade, Set<SubjectGrade>> createGrades() {
         Set<SubjectGrade> alexGrades = new HashSet<>();
         alexGrades.add(new SubjectGrade(Subject.MATHEMATICS, 89));
         alexGrades.add(new SubjectGrade(Subject.PHYSICS, 65));

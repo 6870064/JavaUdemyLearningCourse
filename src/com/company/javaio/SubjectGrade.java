@@ -35,6 +35,6 @@ public class SubjectGrade {
 
     @Override
     public String toString() {
-        return "Grade: "  +subject+ " Grade:" +grade;
+        return "Grade: " + subject + " Grade:" + grade;
     }
 }
