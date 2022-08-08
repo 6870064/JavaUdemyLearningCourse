@@ -6,10 +6,21 @@ public class TreeMapRunner {
     public static void main(String[] args) {
         NavigableMap<AverageStudentGrade, Set<SubjectGrade>> grades = createGrades();
         printGrades(grades, false);
+        AverageStudentGrade border = grades.ceilingKey(new AverageStudentGrade("", 80));
+        NavigableMap<AverageStudentGrade, Set<SubjectGrade>> scolarshipStudents = (NavigableMap<AverageStudentGrade, Set<SubjectGrade>>) grades.headMap(border);
+        System.out.println("=======================================");
+        System.out.println("Scolarship students");
+        printGrades(scolarshipStudents.descendingMap(), false);
+        System.out.println("Contender student");
+        AverageStudentGrade contender = grades.lowerKey(border);
+        System.out.println(contender);
+        System.out.println("The highest grade student");
+        System.out.println(scolarshipStudents.descendingMap().firstEntry());
+
 
     }
 
-    private static void printGrades(Map<AverageStudentGrade, Set<SubjectGrade>> grades, boolean printValue) {
+    public static void printGrades(Map<AverageStudentGrade, Set<SubjectGrade>> grades, boolean printValue) {
         Set<AverageStudentGrade> averageStudentGrades = grades.keySet();
         for (AverageStudentGrade gr : averageStudentGrades) {
             System.out.println(gr);
