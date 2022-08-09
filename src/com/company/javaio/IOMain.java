@@ -6,10 +6,15 @@ import java.util.NavigableMap;
 import java.util.Set;
 
 public class IOMain {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        NavigableMap<AverageStudentGrade, Set<SubjectGrade>> grades = TreeMapRunner.createGrades();
+        readFile(grades);
+    }
+
+    private static void readFile(NavigableMap<AverageStudentGrade, Set<SubjectGrade>> grades) throws IOException {
         FileWriter writer = null;
         try {
-            NavigableMap<AverageStudentGrade, Set<SubjectGrade>> grades = TreeMapRunner.createGrades();
+
             writer = new FileWriter("GradeBook.txt");
             for (AverageStudentGrade gradeKey : grades.keySet()) {
                 writer.write("=============================\n");
@@ -18,14 +23,8 @@ public class IOMain {
                     writer.write("Subject: " + grade.getSubject() + " Grade: " + grade.getGrade() + "\n");
                 }
             }
-        } catch (IOException e) {
-            e.printStackTrace();
         } finally {
-            try {
                 writer.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
         }
     }
 }
