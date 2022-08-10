@@ -1,8 +1,10 @@
 package com.company.javaio;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Reader {
 
@@ -12,5 +14,26 @@ public class Reader {
         while ((c = reader.readLine()) != null) {
             System.out.println(c);
         }
+    }
+
+    public List<Student> readObject(String fileName) {
+        List<Student> students = new ArrayList<>();
+        try (ObjectInputStream in = new ObjectInputStream(Files.newInputStream(Paths.get(fileName)))) {
+
+            boolean keepReading = true;
+            while (keepReading) {
+                Student student = (Student) in.readObject();
+                if (!"".equals(student.getStudentName())) {
+                    students.add((student));
+                } else {
+                    keepReading = false;
+                }
+            }
+        } catch (IOException e) {
+            System.out.println("Unable to open the file " +fileName+ " . Program terminated");
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return students;
     }
 }
