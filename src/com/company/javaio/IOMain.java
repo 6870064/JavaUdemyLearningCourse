@@ -12,10 +12,13 @@ public class IOMain {
         SortedMap<AverageStudentGrade, Set<SubjectGrade>> grades = TreeMapRunner.createGrades();
         Reader reader = new Reader();
         Writer writer = new Writer();
-        reader.readFile(FILE_MAME);
-        writer.readFile(grades, FILE_MAME);
+//        reader.readFile(FILE_MAME);
+//        writer.readFile(grades, FILE_MAME);
        // writer.writeWithFormatter();
-        processGrades(grades, writer, BINARY_FILE_NAME);
+        //processGrades(grades, writer, BINARY_FILE_NAME);
+
+       FileUtils utils = new FileUtils();
+       utils.printIOFileDetails("./");
     }
 
     private static void processGrades(SortedMap<AverageStudentGrade, Set<SubjectGrade>> grades, Writer writer, String fileName){
