@@ -15,7 +15,7 @@ public class Notes {
 
         //документирующие комментарии
 /**
-        Created by Dmitry on 12.09.2022
-*/
+ Created by Dmitry on 12.09.2022
+ */
     }
 }

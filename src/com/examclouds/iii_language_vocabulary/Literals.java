@@ -40,11 +40,11 @@ public class Literals {
         char letter0 = '\u004F';
         char letter_a = '\141';
 
-        System.out.println(letter0+ " " +letter_a);
+        System.out.println(letter0 + " " + letter_a);
 
         char h1 = 0x675;
         char h2 = 345;
-        char h3 = (char)800000;
+        char h3 = (char) 800000;
 
         char h4 = '\'';
         char h5 = '\n';

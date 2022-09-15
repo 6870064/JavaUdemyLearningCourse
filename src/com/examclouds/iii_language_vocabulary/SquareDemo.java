@@ -7,7 +7,7 @@ public class SquareDemo {
         System.out.println(square(11));
     }
 
-    public static int square(int i){
+    public static int square(int i) {
         return i * i;
     }
 }
