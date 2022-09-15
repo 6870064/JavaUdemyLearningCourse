@@ -46,9 +46,9 @@ public class LiteralsTask {
                     System.out.println("3.45 - тип данных double");
                     break;
                 default:
-                    break;
+                    System.out.println("Вы ввели число вне диапазона [1;9]");
             }
-        } else System.out.println("Вы ввели число вне диапазона [1;9]");
+        } else System.out.println("Вы ввели не целое число");
     }
 }
 /**
@@ -62,4 +62,4 @@ public class LiteralsTask {
  7 целочисленный 16-й
  8 литерал типа float
  9 литерал типа double.
- **/
+ */
