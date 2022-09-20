@@ -1,6 +1,6 @@
 package com.examclouds.v_operators;
 
-public class c {
+public class WhileTenClass {
     public static void main(String[] args) {
         int i = 1;
         while (i <= 10){
