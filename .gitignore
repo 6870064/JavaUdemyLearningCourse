@@ -3,6 +3,7 @@
 
 # Log file
 *.log
+*.txt
 *JavaUdemyLearningCourse.iml
 *.idea
 
