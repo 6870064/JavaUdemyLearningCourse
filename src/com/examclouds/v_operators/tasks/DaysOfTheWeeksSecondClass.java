@@ -1,4 +1,4 @@
-package com.examclouds.v_operators;
+package com.examclouds.v_operators.tasks;
 
 public class DaysOfTheWeeksSecondClass {
     public static void main(String[] args) {
