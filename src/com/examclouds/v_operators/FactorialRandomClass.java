@@ -2,7 +2,7 @@ package com.examclouds.v_operators;
 
 import java.util.Random;
 
-public class FactorialClass {
+public class FactorialRandomClass {
     public static void main(String[] args) {
         int factorial = 1;
         Random random = new Random();
