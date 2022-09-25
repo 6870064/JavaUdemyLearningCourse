@@ -16,7 +16,7 @@ public class MaxMinValueArrayTask {
             int min = 99;
             for (int j = 0; j < myArray[0].length; j++) {
                 myArray[i][j] = randomGenerator();
-                
+
                 max = max < myArray[i][j] ? myArray[i][j] : max;
                 min = min > myArray[i][j] ? myArray[i][j] : min;
 
