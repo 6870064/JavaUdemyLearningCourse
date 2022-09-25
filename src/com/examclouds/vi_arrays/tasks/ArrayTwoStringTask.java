@@ -1,6 +1,6 @@
 package com.examclouds.vi_arrays.tasks;
 
-public class arrayTwoStringTask {
+public class ArrayTwoStringTask {
     public static void main(String[] args) {
         String[][] myArray= new String[3][6];
 

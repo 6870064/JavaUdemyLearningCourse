@@ -1,6 +1,6 @@
 package com.examclouds.vi_arrays.tasks;
 
-public class arraysStringTask {
+public class ArraysStringTask {
     public static void main(String[] args) {
         String[] weekArray = new String[7];
             weekArray[0] = "Monday";
