@@ -1,4 +1,4 @@
-package com.examclouds.vi_arrays;
+package com.examclouds.vi_arrays.training;
 
 import java.util.Arrays;
 

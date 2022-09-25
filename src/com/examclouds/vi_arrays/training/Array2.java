@@ -1,4 +1,4 @@
-package com.examclouds.vi_arrays;
+package com.examclouds.vi_arrays.training;
 
 public class Array2 {
     public static void main(String[] args) {
