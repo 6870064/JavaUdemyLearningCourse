@@ -2,7 +2,7 @@ package com.examclouds.vii_algoritms;
 
 import java.util.Arrays;
 
-public class arrayInverterClass {
+public class ArrayInverterClass {
     public static void main(String[] args) {
         int[] myArray = createArray(10);
         arrayInvert(myArray);
