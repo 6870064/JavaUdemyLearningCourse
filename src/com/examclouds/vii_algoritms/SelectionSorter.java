@@ -2,7 +2,7 @@ package com.examclouds.vii_algoritms;
 
 import java.util.Arrays;
 
-public class SelectionSector {
+public class SelectionSorter {
     public static void main(String[] args) {
         int[] myArray = arrayGenerator(10);
         sortArray(myArray);
