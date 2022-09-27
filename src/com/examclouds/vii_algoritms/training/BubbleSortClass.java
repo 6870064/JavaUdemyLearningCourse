@@ -1,4 +1,4 @@
-package com.examclouds.vii_algoritms;
+package com.examclouds.vii_algoritms.training;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;

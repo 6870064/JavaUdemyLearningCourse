@@ -1,4 +1,4 @@
-package com.examclouds.vii_algoritms;
+package com.examclouds.vii_algoritms.training;
 
 public class BinarySearch {
     public static void main(String[] args) {

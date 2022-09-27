@@ -1,4 +1,4 @@
-package com.examclouds.vii_algoritms;
+package com.examclouds.vii_algoritms.training;
 
 public class ChangeValues2 {
     public static void main(String[] args) {

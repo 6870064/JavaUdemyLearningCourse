@@ -1,4 +1,4 @@
-package com.examclouds.vii_algoritms;
+package com.examclouds.vii_algoritms.training;
 
 public class RecursiveBinarySearch {
     public static void main(String[] args) {
