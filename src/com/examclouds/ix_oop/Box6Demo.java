@@ -6,7 +6,6 @@ public class Box6Demo {
         Box6 myBox2 = new Box6();
         Box6 myBox3 = new Box6(7);
 
-
         System.out.println(String.format("Объем MyBox1 = %,.2f.0", myBox1.getVolume()));
         System.out.println(String.format("Объем MyBox2 = %,.2f.0", myBox2.getVolume()));
         System.out.println(String.format("Объем MyBox3 = %,.2f.0", myBox3.getVolume()));
