@@ -1,4 +1,4 @@
-package com.examclouds.ix_oop;
+package com.examclouds.ix_oop.training;
 
 public class VarArgs2 {
     static void test(double...array){

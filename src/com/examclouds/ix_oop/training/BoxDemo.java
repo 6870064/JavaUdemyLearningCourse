@@ -1,4 +1,4 @@
-package com.examclouds.ix_oop;
+package com.examclouds.ix_oop.training;
 
 public class BoxDemo {
     public static void main(String[] args) {
