@@ -1,4 +1,4 @@
-package com.examclouds.ix_oop.task;
+package com.examclouds.ix_oop.tasks;
 
 public class Person {
     public static String fullName;

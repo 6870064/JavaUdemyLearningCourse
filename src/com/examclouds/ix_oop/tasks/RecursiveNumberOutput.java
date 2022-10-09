@@ -1,4 +1,4 @@
-package com.examclouds.ix_oop.task;
+package com.examclouds.ix_oop.tasks;
 
 public class RecursiveNumberOutput {
     public static void main(String[] args) {
