@@ -1,13 +1,13 @@
-package com.examclouds.ix_oop.tasks.i_phone_class;
+package com.examclouds.ix_oop.tasks.i_phone;
 
 public class Phone {
-    Manufacturer manufacturer;
     public String number;
     public String model;
     public int weight;
+    Manufacturer manufacturer;
 
     public Phone(Manufacturer manufacturer, String number, String model, int weight) {
-        this(manufacturer,number,model);
+        this(manufacturer, number, model);
         this.weight = weight;
     }
 
@@ -18,6 +18,20 @@ public class Phone {
     }
 
     public Phone() {
+    }
+
+    public static void receiveCall(String callerName) {
+        System.out.println(String.format("%s is calling", callerName));
+    }
+
+    public static void receiveCall(String callerName, String phoneNumber) {
+        System.out.println(String.format("%s is calling from the number %s", callerName, phoneNumber));
+    }
+
+    public static void sendMessage(String... args) {
+        for (String number : args) {
+            System.out.println(number);
+        }
     }
 
     public Manufacturer getManufacturer() {
@@ -50,21 +64,6 @@ public class Phone {
 
     public void setWeight(int weight) {
         this.weight = weight;
-    }
-
-
-    public static void receiveCall(String callerName){
-        System.out.println(String.format("%s is calling", callerName));
-    }
-
-    public static void receiveCall(String callerName, String phoneNumber){
-        System.out.println(String.format("%s is calling from the number %s", callerName, phoneNumber));
-    }
-
-    public static void sendMessage(String...args){
-        for (String number : args){
-            System.out.println(number);
-        }
     }
 
     @Override

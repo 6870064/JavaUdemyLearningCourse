@@ -1,4 +1,4 @@
-package com.examclouds.ix_oop.tasks.i_phone_class;
+package com.examclouds.ix_oop.tasks.i_phone;
 
 public enum Manufacturer {
     APPLE, SAMSUNG, XIAOMI, LG, GOOGLE;

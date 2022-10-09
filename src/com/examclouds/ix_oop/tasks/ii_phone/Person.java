@@ -1,12 +1,12 @@
-package com.examclouds.ix_oop.tasks;
+package com.examclouds.ix_oop.tasks.ii_phone;
 
 public class Person {
     public static String fullName;
     public static int age;
 
     public Person(String fullName, int age) {
-        this.fullName = fullName;
-        this.age = age;
+        Person.fullName = fullName;
+        Person.age = age;
     }
 
     public Person() {
@@ -17,7 +17,7 @@ public class Person {
     }
 
     public void setFullName(String fullName) {
-        this.fullName = fullName;
+        Person.fullName = fullName;
     }
 
     public static int getAge() {
@@ -25,14 +25,14 @@ public class Person {
     }
 
     public void setAge(int age) {
-        this.age = age;
+        Person.age = age;
     }
 
-    public static void move(){
+    public static void move() {
         System.out.println(String.format("Person %s is moving", getFullName()));
     }
 
-    public static void talk(){
+    public static void talk() {
         System.out.println(String.format("Person with the age %s and the name %s is talking", getAge(), getFullName()));
     }
 
