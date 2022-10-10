@@ -1,26 +1,100 @@
 package com.examclouds.ix_oop.tasks.iv_library_readers;
 
 public class Reader {
-    public static String fullName;
-    public int libraryCard;
-    Faculty faculty;
-    public String birthDate;
-    public String phoneNumber;
+    private String fullName;
+    private int libraryCard;
+    private String birthDate;
+    private String phoneNumber;
+    private Faculty faculty;
 
-    public Reader(String fullName, int libraryCard, Faculty faculty, String birthDate, String phoneNumber) {
+    public Reader(String fullName, int libraryCard, String birthDate, String phoneNumber, Faculty faculty) {
         this.fullName = fullName;
         this.libraryCard = libraryCard;
-        this.faculty = faculty;
         this.birthDate = birthDate;
         this.phoneNumber = phoneNumber;
+        this.faculty = faculty;
     }
 
-    public static String getFullName() {
+    public String getFullName() {
         return fullName;
     }
 
     public void setFullName(String fullName) {
         this.fullName = fullName;
+    }
+
+    /**
+     * Метод, который принимает количество взятых книг
+     *
+     * @param booksAmount
+     */
+    public void takeBook(int booksAmount) {
+        System.out.println(String.format("%s взял %s книг", getFullName(), booksAmount));
+    }
+
+    /**
+     * метод, который принимает названия книг
+     *
+     * @param books
+     */
+    public void takeBook(String... books) {
+        System.out.println(String.format("%s взял следующие книги: ", getFullName()));
+        for (String book : books) {
+            System.out.println(book);
+        }
+        System.out.println();
+    }
+
+    /**
+     * метод, принимающий объекты книги
+     *
+     * @param books
+     */
+
+    public void takeBook(Book... books) {
+        System.out.println(String.format("%s взял следующие книги: ", getFullName()));
+        int booksAmount = 0;
+        for (Book book : books) {
+            System.out.println(String.format("%s, автор - %s", book.getBookTitle(), book.getBookAuthor()));
+            booksAmount++;
+        }
+        System.out.println();
+        System.out.println(String.format("%s взял %s книг", getFullName(), booksAmount));
+    }
+
+    /**
+     * метод, принимающий количество книг, которые вернул читатель
+     *
+     * @param booksAmount
+     */
+
+    public void returnBook(int booksAmount) {
+        System.out.println(String.format("%s вернул %s книг", getFullName(), booksAmount));
+    }
+
+    /**
+     * Метод, принимающий названия книг, которые вернул читатель
+     *
+     * @param books
+     */
+    public void returnBook(String... books) {
+        System.out.println(this.getFullName() + " вернул следующие книги:");
+        for (String book : books) {
+            System.out.println(book);
+        }
+    }
+
+    /**
+     * Метод, принимающий книги как обьекты
+     * @param books
+     */
+
+    public void returnBook(Book... books) {
+        System.out.println(this.getFullName() + " вернул следующие книги:");
+        for (Book book : books) {
+            System.out.println(book.getBookTitle() + ", автор - " + book.getBookAuthor());
+        }
+        System.out.println();
     }
 
     public int getLibraryCard() {
@@ -55,15 +129,23 @@ public class Reader {
         this.phoneNumber = phoneNumber;
     }
 
-    public static void takeBook(Book...book){
-        for (int i =0; i < book.length; i++) {
-            System.out.print(book[i]);
+    /**
+     * Метод вывода на печать читателей, переданных как объекты
+     */
+    public void printReaders(Reader... readers) {
+        System.out.println("Список читателей: ");
+        for (Reader reader : readers) {
+            System.out.println(reader.getFullName());
         }
-        System.out.println();
-        System.out.println(String.format("%s взял % книг", getFullName(), book.length));
     }
 
-    public static void takeBook(int booksAmount){
-        System.out.println(String.format("%s взял %книг", getFullName(),booksAmount));
+    /**
+     * Метод вывода на печать читателей, переданных как массив
+     */
+    public void printReaders(Reader[]... readers) {
+        System.out.println("Список читателей: ");
+        for (Reader[] reader : readers) {
+            System.out.println(reader);
+        }
     }
 }
