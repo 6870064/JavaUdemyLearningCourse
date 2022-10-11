@@ -1,4 +1,4 @@
-package com.examclouds.ix_oop.tasks.inheritance_student_aspirant;
+package com.examclouds.ix_oop.tasks.iv_inheritance_student_aspirant;
 
 public class Aspirant extends Student{
     private String study;
