@@ -4,7 +4,11 @@ public class Child extends Parent {
     public void someMethod(){
         publicParentAccessMethod();
         protectedParentAccessMethod();
-
+        defaultParentAccessMethod();
+        defaultChildMethod();
+        publicChildMethod();
+        protectedChildAccessMethod();
+        privateChildMethod();
     }
 
     void defaultChildMethod(){

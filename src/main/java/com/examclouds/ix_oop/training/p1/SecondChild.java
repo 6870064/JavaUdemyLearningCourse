@@ -4,8 +4,8 @@ public class SecondChild {
 
     Child child = new Child();
     public void someMethod(){
-        child.defaultChildMethod();
-        child.publicChildMethod();
         child.protectedChildAccessMethod();
+        child.publicChildMethod();
+        child.defaultChildMethod();
     }
 }
