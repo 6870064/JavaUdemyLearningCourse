@@ -40,7 +40,7 @@ public class SynchronizedBlocks {
         }
 
         long end = System.currentTimeMillis();
-        System.out.println("Time taken : " +(end - start)+ " ms ");
+        System.out.println("Time taken : " + (end - start) + " ms ");
     }
 
     private void copyArrayA() {
