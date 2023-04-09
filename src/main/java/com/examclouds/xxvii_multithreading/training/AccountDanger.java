@@ -1,6 +1,5 @@
 package com.examclouds.xxvii_multithreading.training;
 
-import com.examclouds.xii_interfaces_and_enums.training.internal_interfaces.A;
 
 public class AccountDanger implements Runnable {
     Account account = new Account();

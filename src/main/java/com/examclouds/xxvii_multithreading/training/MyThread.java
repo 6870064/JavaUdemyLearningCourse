@@ -1,6 +1,5 @@
 package com.examclouds.xxvii_multithreading.training;
 
-import org.jetbrains.annotations.NotNull;
 
 public class MyThread extends Thread {
     public void run() {
@@ -22,7 +21,7 @@ public class MyThread extends Thread {
         super(target, name);
     }
 
-    public MyThread(@NotNull String name) {
-        super(name);
-    }
+//    //  public MyThread(@NotNull String name) {
+//        super(name);
+//    }
 }
