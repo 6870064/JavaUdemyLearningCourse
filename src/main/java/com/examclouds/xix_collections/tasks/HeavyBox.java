@@ -1,6 +1,6 @@
 package com.examclouds.xix_collections.tasks;
 
-public class HeavyBox {
+public class HeavyBox implements Comparable {
     int weight;
 
     public HeavyBox(int weight) {
@@ -20,5 +20,10 @@ public class HeavyBox {
         return "HeavyBox{" +
                 "weight=" + weight +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        return 0;
     }
 }
