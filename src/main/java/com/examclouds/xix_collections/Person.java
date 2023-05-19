@@ -1,9 +1,11 @@
 package com.examclouds.xix_collections;
 
-public class Person implements Comparable<Person> {
-private String firstName;
-private String lastName;
-private int age;
+import java.util.Objects;
+
+public class Person implements Comparable <Person> {
+    private String firstName;
+    private String lastName;
+    private int age;
 
     public Person(String firstName, String lastName, int age) {
         this.firstName = firstName;
@@ -36,31 +38,8 @@ private int age;
     }
 
     @Override
-    public int compareTo(Person anotherPerson) {
-        int anotherPersonAge = anotherPerson.getAge();
-        return this.age - anotherPersonAge;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        Person person = (Person) o;
-
-        if (getAge() != person.getAge()) return false;
-        if (getFirstName() != null ? !getFirstName().equals(person.getFirstName()) : person.getFirstName() != null)
-            return false;
-        return getLastName() != null ? getLastName().equals(person.getLastName()) : person.getLastName() == null;
-
-    }
-
-    @Override
-    public int hashCode() {
-        int result = getFirstName() != null ? getFirstName().hashCode() : 0;
-        result = 31 * result + (getLastName() != null ? getLastName().hashCode() : 0);
-        result = 31 * result + getAge();
-        return result;
+    public int compareTo(Person o) {
+        return 0;
     }
 
     @Override
@@ -70,5 +49,21 @@ private int age;
                 ", lastName='" + lastName + '\'' +
                 ", age=" + age +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return age == person.age && Objects.equals(firstName, person.firstName) && Objects.equals(lastName, person.lastName);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = getFirstName() != null ? getFirstName().hashCode() : 0;
+        result = 31 * result + (getLastName() != null ? getLastName().hashCode() : 0);
+        result = 31 * result + getAge();
+        return result;
     }
 }
