@@ -1,6 +1,6 @@
 package com.examclouds.xiv_strings.tasks;
 
-public class ReplaceEverySecondString {
+public class ReplaceEverySecondString03 {
     public static void main(String[] args) {
 
         String str = "Object-oriented programming is a programming language model organized around objects rather than " +
@@ -13,6 +13,6 @@ public class ReplaceEverySecondString {
 
 
     public static void replaceSecondString(String string) {
-        
+
     }
 }
