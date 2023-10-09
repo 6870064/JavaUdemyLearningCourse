@@ -1,4 +1,4 @@
-package com.examclouds.xx_exeptions;
+package com.examclouds.xx_exeptions.training;
 
 public class ExceptionDemo2 {
     public static void main(String[] args) {

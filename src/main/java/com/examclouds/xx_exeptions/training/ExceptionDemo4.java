@@ -1,4 +1,4 @@
-package com.examclouds.xx_exeptions;
+package com.examclouds.xx_exeptions.training;
 
 
 import java.text.NumberFormat;
