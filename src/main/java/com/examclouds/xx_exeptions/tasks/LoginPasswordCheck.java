@@ -8,5 +8,5 @@ public class LoginPasswordCheck {
 
 
 
-https://github.com/petrykin/homeworks/tree/master
+// https://github.com/petrykin/homeworks/tree/master
 // https://znanija.com/task/52756508
