@@ -22,7 +22,7 @@ public class LoginPasswordCheck {
         try {
             //Проверяем login
             if (!login.matches("^[a-aA-AZ0-9_]{1,20}$")) {
-                throw new WrongLoginExeption("Login is wrong");
+                throw new WrongLoginException("Login is wrong");
             }
 
             //Проверяем password
@@ -30,7 +30,7 @@ public class LoginPasswordCheck {
                 throw new WrongPasswordException("Passwords do not match");
             }
             if (!password.matches("^[a-zA-Z0-9_]{1,20}$")) {
-                throw new WrongPasswordException();
+                throw new WrongPasswordException("Passwords do not match");
             }
             return true;
         } catch (WrongLoginException | WrongPasswordException e) {
@@ -39,6 +39,7 @@ public class LoginPasswordCheck {
         }
     }
 }
+
 
 /*
 Исключения. Задания
