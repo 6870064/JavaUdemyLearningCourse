@@ -22,7 +22,11 @@ public class LoginPasswordCheck {
         try {
             //Проверяем login
             if (!login.matches("^[a-aA-AZ0-9_]{1,20}$")) {
-                throw new WrongLoginException("Login is wrong");
+                try {
+                    throw new WrongLoginException("Login is wrong");
+                } catch (WrongLoginException e) {
+                    throw new RuntimeException(e);
+                }
             }
 
             //Проверяем password
@@ -33,7 +37,7 @@ public class LoginPasswordCheck {
                 throw new WrongPasswordException("Passwords do not match");
             }
             return true;
-        } catch (WrongLoginException | WrongPasswordException e) {
+        } catch (WrongPasswordException e) {
             System.out.println(e.getMessage());
             return false;
         }

@@ -16,8 +16,7 @@ public class StaticBlock {
     static String a;
 
     static {
-        System.out.println("Static block is initialised");
-        System.out.println("Enter any symbol");
+        System.out.println("Статический блок инициализирован");
         Scanner scanner = new Scanner(System.in);
         a = scanner.nextLine();
     }
