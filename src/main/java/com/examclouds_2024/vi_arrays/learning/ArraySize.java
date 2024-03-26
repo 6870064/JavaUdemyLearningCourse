@@ -1,4 +1,4 @@
-package com.examclouds_2024;
+package com.examclouds_2024.vi_arrays.learning;
 
 public class ArraySize {
     public static void main(String[] args) {
