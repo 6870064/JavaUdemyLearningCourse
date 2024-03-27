@@ -30,7 +30,7 @@ public class Task5 {
         System.out.println("Печать исходного массива");
         for (int i = 0; i < intArray.length; i++) {
             for (int j = 0; j < intArray[0].length; j++) {
-                System.out.print(intArray[i][j]+ " ");
+                System.out.print(intArray[i][j] + " ");
             }
             System.out.println();
         }
@@ -38,13 +38,12 @@ public class Task5 {
         System.out.println("Печать массива, содержащего максимальное и минимальное значение.");
         for (int i = 0; i < minMaxArray.length; i++) {
             for (int j = 0; j < minMaxArray[0].length; j++) {
-                System.out.print(minMaxArray[i][j]+ " ");
+                System.out.print(minMaxArray[i][j] + " ");
             }
             System.out.println();
         }
     }
 }
-
 
 /*
 5. Поиск максимального и минимального значения в каждой строке массива.
