@@ -2,7 +2,7 @@ package com.examclouds;
 
 import java.util.HashMap;
 
-public class Map {
+public class Map<S, D extends Number> {
     public static void main(String[] args) {
         HashMap<Integer, String> idAndNames = new HashMap<>();
         idAndNames.put(1, "Piotr");
